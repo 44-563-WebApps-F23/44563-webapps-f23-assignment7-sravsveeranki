@@ -48,7 +48,7 @@
         <p>Penalty is zero</p>
     </div>
     <div id="helplink">
-        <p><a href="#">Click for help</a></p>
+        <button id="helpButton" onclick="help()">Click for help</button>
     </div>
     <div id="help">
         <p>Help report</p>
@@ -58,41 +58,103 @@
     <div class="container">
         <h2 class="text-center">Treasure Hunt </h2>
         <div class="row">
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle" ></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
+            <div class="col-2  "> <img id="image0" src="location.png" alt="Location" class="mystyle" onclick="check(0)"></div>
+            <div class="col-2  "> <img id="image01" src="location.png" alt="Location" class="mystyle" onclick="check(1)"></div>
+            <div class="col-2  "> <img id="image02" src="location.png" alt="Location" class="mystyle" onclick="check(2)"></div>
+            <div class="col-2  "> <img id="image03" src="location.png" alt="Location" class="mystyle" onclick="check(3)"></div>
+            <div class="col-2  "> <img id="image04" src="location.png" alt="Location" class="mystyle" onclick="check(4)"></div>
         </div>
         <div class="row">
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle" ></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
+            <div class="col-2  "> <img id="image05" src="location.png" alt="Location" class="mystyle" onclick="check(5)"></div>
+            <div class="col-2  "> <img id="image06" src="location.png" alt="Location" class="mystyle" onclick="check(6)"></div>
+            <div class="col-2  "> <img id="image07" src="location.png" alt="Location" class="mystyle" onclick="check(7)"></div>
+            <div class="col-2  "> <img id="image08" src="location.png" alt="Location" class="mystyle" onclick="check(8)"></div>
+            <div class="col-2  "> <img id="image09" src="location.png" alt="Location" class="mystyle" onclick="check(9)"></div>
         </div>
         <div class="row">
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle" ></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
+            <div class="col-2  "> <img id="image10" src="location.png" alt="Location" class="mystyle" onclick="check(10)"></div>
+            <div class="col-2  "> <img id="image11" src="location.png" alt="Location" class="mystyle" onclick="check(11)"></div>
+            <div class="col-2  "> <img id="image12" src="location.png" alt="Location" class="mystyle" onclick="check(12)"></div>
+            <div class="col-2  "> <img id="image13" src="location.png" alt="Location" class="mystyle" onclick="check(13)"></div>
+            <div class="col-2  "> <img id="image14" src="location.png" alt="Location" class="mystyle" onclick="check(14)"></div>
         </div>
         <div class="row">
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle" ></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
+            <div class="col-2  "> <img id="image16" src="location.png" alt="Location" class="mystyle" onclick="check(15)"></div>
+            <div class="col-2  "> <img id="image17" src="location.png" alt="Location" class="mystyle" onclick="check(16)"></div>
+            <div class="col-2  "> <img id="image18" src="location.png" alt="Location" class="mystyle" onclick="check(17)"></div>
+            <div class="col-2  "> <img id="image19" src="location.png" alt="Location" class="mystyle" onclick="check(18)"></div>
+            <div class="col-2  "> <img id="image20" src="location.png" alt="Location" class="mystyle" onclick="check(19)"></div>
         </div>
         <div class="row">
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle" ></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
-            <div class="col-2  "> <img src="location.png" alt="Location" class="mystyle"></div>
+            <div class="col-2  "> <img id="image21" src="location.png" alt="Location" class="mystyle" onclick="check(20)"></div>
+            <div class="col-2  "> <img id="image22" src="location.png" alt="Location" class="mystyle" onclick="check(21)"></div>
+            <div class="col-2  "> <img id="image23" src="location.png" alt="Location" class="mystyle" onclick="check(22)"></div>
+            <div class="col-2  "> <img id="image24" src="location.png" alt="Location" class="mystyle" onclick="check(23)"></div>
+            <div class="col-2  "> <img id="image25" src="location.png" alt="Location" class="mystyle" onclick="check(24)"></div>
         </div>
     </div>
+    
+    <script>
+        let ids = [
+            "image0", "image01", "image02", "image03", "image04",
+            "image05", "image06", "image07", "image08", "image09",
+            "image10", "image11", "image12", "image13", "image14",
+            "image15", "image16", "image17", "image18", "image19",
+            "image20", "image21", "image22", "image23", "image24"
+        ];
+        let checkCount = 0;
+        let penalty = 0;
+        let lastCheck = 0;
+        let treasureLocation = 5;
+        let trapLocation = 18;
+        let gameOver = false;
+        function check(position) {
+            if (!gameOver)
+            {
+                let imageId = ids[position];
+                let imageElement = document.getElementById(imageId);
+                if (position === treasureLocation)
+                {
+                    imageElement.src = "treasure.jpg";
+                    gameOver = true;
+                    penalty -= 3;
+                }
+                else if (position === trapLocation)
+                 {  
+                    imageElement.src = "trap.jpg";
+                    gameOver = true;
+                    penalty += 4;
+                 }
+                else
+                {
+                    imageElement.src = "Pirate cap.png";
+                    penalty+=1;
+                }
+                checkCount++;
+                document.getElementById("locations").textContent = "Location: " + position;
+                document.getElementById("penalty").textContent = "Penalty: " + penalty;
+                lastCheck = position;
+            }
+        }
+        function help()
+        {
+            let treasureRow = Math.floor(treasureLocation / 5);
+            let treasureCol = treasureLocation % 5;
+            let lastLocationRow = Math.floor(lastCheck / 5);
+            let lastLocationCol = lastCheck % 5;
+            let rowDifference = Math.abs(treasureRow - lastLocationRow);
+            let colDifference = Math.abs(treasureCol - lastLocationCol);
+        if ((rowDifference === 1 && colDifference <= 1) || (colDifference === 1 && rowDifference <= 1)) {
+            document.getElementById("help").textContent = "Can smell it";
+        } else if (rowDifference + colDifference === 2) {
+            document.getElementById("help").textContent = "Close Matie";
+        } else {
+            document.getElementById("help").textContent = "Step Faster";
+        }
+        penalty += 2;
+        document.getElementById("penalty").textContent = "Penalty: " + penalty;
+    } 
+</script>
 
 </body>
 </html>
