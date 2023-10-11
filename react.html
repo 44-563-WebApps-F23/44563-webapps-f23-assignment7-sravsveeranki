@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sai Sravani Veeranki Speed Check</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1 style="color: #936464;">Sai Sravani Veeranki Speed Check</h1>
+    <div id="target">Your time: </div>
+    <div id="counter">Count: </div>
+    <button style="background-color:  #d8e6ef" id="startButton">Start Timer</button>
+    <button style="background-color:  #d8e6ef" id="reactButton">React</button>
+    <script>
+        var reactTime = undefined;
+
+        function recordTime() {
+            reactTime = Date.now();
+            console.log(reactTime);
+        }
+
+        document.getElementById("reactButton").onclick = recordTime;
+
+        function startTime() {
+            for (var i = 0; i < 9; i++) {
+                setTimeout(function (i) {
+                    document.getElementById("counter").innerHTML = "Count: " + i;
+                }, (8 - i) * 1000, i);
+            }
+
+            setTimeout(function () {
+                if (reactTime === undefined) {
+                    document.getElementById("target").innerHTML = "Too Slow";
+                } else {
+                    var endTime = Date.now();
+                    var elapsed = endTime - reactTime;
+                    document.getElementById("target").innerHTML = "Time was " + elapsed + "ms";
+                }
+            }, 8000);
+        }
+
+        document.getElementById("startButton").onclick = startTime;
+    </script>
+</body>
+</html>
