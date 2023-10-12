@@ -28,7 +28,8 @@
         document.getElementById("reactButton").onclick = recordTime;
 
         function startTime() {
-            for (var i = 0; i < 9; i++) {
+            let randomCount = Math.round(Math.random() * (10 - 2) + 2)
+            for (var i = 0; i < randomCount; i++) {
                 setTimeout(function (i) {
                     document.getElementById("counter").innerHTML = "Count: " + i;
                 }, (8 - i) * 1000, i);
