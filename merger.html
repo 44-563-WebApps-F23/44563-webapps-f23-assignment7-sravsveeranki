@@ -17,6 +17,7 @@
     <button style="background-color:  #d8e6ef" id="addEndButton">Add end</button>
     <button style="background-color:  #d8e6ef" id="addFrontButton">Add front</button>
     <button style="background-color:  #d8e6ef" id="removeButton">Remove</button>
+    <button style="background-color:  #d8e6ef" id="swapButton">Swap</button>
     <div class="flex-container"></div>
     <script>
         document.getElementById("addEndButton").onclick = function () {
@@ -44,6 +45,27 @@
             const container = document.querySelector(".flex-container");
             container.insertBefore(newElement, container.firstChild);
         };
+
+    function swapElements() {
+        const elements = document.getElementsByClassName('merger'); 
+        const indexA = Math.floor(Math.random() * elements.length);
+        let indexB = Math.floor(Math.random() * elements.length);
+
+        while (indexB === indexA) {
+        indexB = Math.floor(Math.random() * elements.length);
+    }
+
+        const parent = elements[0].parentNode; 
+        const elementA = elements[indexA].cloneNode(true);
+        const elementB = elements[indexB].cloneNode(true);
+
+        parent.replaceChild(elementB, elements[indexA]);
+        parent.replaceChild(elementA, elements[indexB]);
+    }
+
+    const swapButton = document.getElementById('swapButton'); 
+    swapButton.addEventListener('click', swapElements);
+
     </script>
 </body>
 </html>
