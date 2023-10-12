@@ -154,6 +154,22 @@
         penalty += 2;
         document.getElementById("penalty").textContent = "Penalty: " + penalty;
     } 
+
+    function initGame() {
+        trapLocation = Math.floor(Math.random() * 25);
+        treasureLocation = Math.floor(Math.random() * 25);
+ 
+        while (trapLocation === treasureLocation) {
+          treasureLocation = Math.floor(Math.random() * 25);
+        }
+      }
+      function resetGame() {
+        initGame();
+      }
+      initGame();
+      const newGameButton = document.getElementById('new-game-button');
+      newGameButton.addEventListener('click', resetGame);
     </script>
+    
 </body>
 </html>
